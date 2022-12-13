@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.App button {
+  border: none;
+  padding: 10px 30px;
+  margin: 20px;
+  background-color: black;
+  color: yellow
+}
+.App span {
+  padding-right: 15px;
+}
