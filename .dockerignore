@@ -1,0 +1,5 @@
+server/binding.gyp
+server/gost89.cc
+server/gost89.exe
+build
+*.pptx
