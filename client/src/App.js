@@ -12,17 +12,29 @@ function App() {
   const [keyEncrypt, setKeyEncrypt] = useState("");
   const [keyDecrypt, setKeyDecrypt] = useState("");
 
+  const isCyrrillicLetter = (value) => {
+    return "йцукенгшщзхфывапролджячсмитьбюэ".includes(value.slice(-1));
+  };
+
   const handlePlainTextChange = (event) => {
-    setPlainText(event.target.value);
+    if (!isCyrrillicLetter(event.target.value)) {
+      setPlainText(event.target.value);
+    }
   };
   const handleCipherTextChange = (event) => {
-    setCipherText(event.target.value);
+    if (!isCyrrillicLetter(event.target.value)) {
+      setCipherText(event.target.value);
+    }
   };
   const handleKeyEncryptChange = (event) => {
-    setKeyEncrypt(event.target.value);
+    if (!isCyrrillicLetter(event.target.value)) {
+      setKeyEncrypt(event.target.value);
+    }
   };
   const handleKeyDecryptChange = (event) => {
-    setKeyDecrypt(event.target.value);
+    if (!isCyrrillicLetter(event.target.value)) {
+      setKeyDecrypt(event.target.value);
+    }
   };
 
   const encryptMessage = async () => {
